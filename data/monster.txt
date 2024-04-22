@@ -1,0 +1,1 @@
+Monster{id=1, name='Bulbasaur', desc='null', types=[grass, poison], region=Region[id=0, name=kanto, description=The region where it all started shares a name with Japan's Kanto region a real-world area located on the island of Honshu], hp=45, attack=49, defense=49, specAttack=65, specDefense=56, speed=45, monsterPath=data\singlePokemon.xml, regionPath=data\regions.csv}
