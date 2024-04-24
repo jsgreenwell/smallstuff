@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
+// Wouldn't have unused if full production but tests & logging not connected
+// Suppressing Warnings for above reasons
+@SuppressWarnings({"unused", "CallToPrintStackTrace", "resource"})
 public class Monster {
     // Monster Demographics variables
     // Information pulled from https://www.pokemon.com/pokedex
@@ -35,7 +37,7 @@ public class Monster {
     }
     /**
      * LoadMonster is called at start with the default path of data/singlePokemon.xml.
-     * File can be overriden and a different file loaded by calling this version of the method.
+     * File can be overwritten and a different file loaded by calling this version of the method.
      * @param newFile The string value of the path and filename for new monster file.
      */
     public void loadMonster(String newFile) {
@@ -92,7 +94,7 @@ public class Monster {
 
                         switch (counter) {
                             // Check counter from 0 to 5 - set a stat
-                            // If its not 0-5 then break out by setting flag
+                            // If it's not 0-5 then break out by setting flag
                             case 0:
                                 hp = Integer.parseInt(line);
                                 break;
@@ -136,7 +138,7 @@ public class Monster {
      */
     private void loadRegion() {
         // we are just going to assume that Bulbasaur is the first region
-        // Typically this would be a seperate table in a database
+        // Typically this would be a separate table in a database
 
         // variable to hold all regions (outside of try scope)
         List<Region> regions = new ArrayList<>();
