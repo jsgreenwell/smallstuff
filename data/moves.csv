@@ -1,0 +1,86 @@
+﻿id,name,type,category,pp,power,accuracy
+1,Pound,Normal,Physical,35,40,1
+2,Karate Chop,Fighting,Physical,25,50,1
+3,Double Slap,Normal,Physical,10,15,0.85
+4,Comet Punch,Normal,Physical,15,18,0.85
+5,Mega Punch,Normal,Physical,20,80,0.85
+6,Pay Day,Normal,Physical,20,40,1
+7,Fire Punch,Fire,Physical,15,75,1
+8,Ice Punch,Ice,Physical,15,75,1
+9,Thunder Punch,Electric,Physical,15,75,1
+10,Scratch,Normal,Physical,35,40,1
+11,Vise Grip,Normal,Physical,30,55,1
+12,Guillotine,Normal,Physical,5,0,0.3
+13,Razor Wind,Normal,Special,10,80,1
+14,Swords Dance,Normal,Status,20,0,0
+15,Cut,Normal,Physical,30,50,0.95
+16,Gust,Flying,Special,35,40,1
+17,Wing Attack,Flying,Physical,35,60,1
+18,Whirlwind,Normal,Status,20,0,1
+19,Fly,Flying,Physical,15,90,0.95
+20,Bind,Normal,Physical,20,15,0.85
+21,Slam,Normal,Physical,20,80,0.75
+22,Vine Whip,Grass,Physical,25,45,1
+23,Stomp,Normal,Physical,20,65,1
+24,Double Kick,Fighting,Physical,30,30,1
+25,Mega Kick,Normal,Physical,5,120,0.75
+26,Jump Kick,Fighting,Physical,10,100,0.95
+27,Rolling Kick,Fighting,Physical,15,60,0.85
+28,Sand Attack,Ground,Status,15,0,1
+29,Headbutt,Normal,Physical,15,70,1
+30,Horn Attack,Normal,Physical,25,65,1
+31,Fury Attack,Normal,Physical,20,15,0.85
+32,Horn Drill,Normal,Physical,5,0,0.3
+33,Tackle,Normal,Physical,35,40,1
+34,Body Slam,Normal,Physical,15,85,1
+35,Wrap,Normal,Physical,20,15,0.9
+36,Take Down,Normal,Physical,20,90,0.85
+37,Thrash,Normal,Physical,10,120,1
+38,Double-Edge,Normal,Physical,15,120,1
+39,Tail Whip,Normal,Status,30,0,1
+40,Poison Sting,Poison,Physical,35,15,1
+41,Twineedle,Bug,Physical,20,25,1
+42,Pin Missile,Bug,Physical,20,25,0.95
+43,Leer,Normal,Status,30,0,1
+44,Bite,Dark,Physical,25,60,1
+45,Growl,Normal,Status,40,0,1
+46,Roar,Normal,Status,20,0,1
+47,Sing,Normal,Status,15,0,0.55
+48,Supersonic,Normal,Status,20,0,0.55
+49,Sonic Boom,Normal,Special,20,0,0.9
+50,Disable,Normal,Status,20,0,1
+51,Acid,Poison,Special,30,40,1
+52,Ember,Fire,Special,25,40,1
+53,Flamethrower,Fire,Special,15,90,1
+54,Mist,Ice,Status,30,0,1
+55,Water Gun,Water,Special,25,40,1
+56,Hydro Pump,Water,Special,5,110,0.8
+57,Surf,Water,Special,15,90,1
+58,Ice Beam,Ice,Special,10,90,1
+59,Blizzard,Ice,Special,5,110,0.7
+60,Psybeam,Psychic,Special,20,65,1
+61,Bubble Beam,Water,Special,20,65,1
+62,Aurora Beam,Ice,Special,20,65,1
+63,Hyper Beam,Normal,Special,5,150,0.9
+64,Peck,Flying,Physical,35,35,1
+65,Drill Peck,Flying,Physical,20,80,1
+66,Submission,Fighting,Physical,20,80,0.8
+67,Low Kick,Fighting,Physical,20,0,1
+68,Counter,Fighting,Physical,20,0,1
+69,Seismic Toss,Fighting,Physical,20,0,1
+70,Strength,Normal,Physical,15,80,1
+71,Absorb,Grass,Special,25,20,1
+72,Mega Drain,Grass,Special,15,40,1
+73,Leech Seed,Grass,Status,10,0,0.9
+74,Growth,Normal,Status,20,0,1
+75,Razor Leaf,Grass,Physical,25,55,0.95
+76,Solar Beam,Grass,Special,10,120,1
+77,Poison Powder,Poison,Status,35,0,0.75
+78,Stun Spore,Grass,Status,30,0,0.75
+79,Sleep Powder,Grass,Status,15,0,0.75
+80,Petal Dance,Grass,Special,10,120,1
+81,String Shot,Bug,Status,40,0,0.95
+82,Dragon Rage,Dragon,Special,10,0,1
+83,Fire Spin,Fire,Special,15,35,0.85
+84,Thunder Shock,Electric,Special,30,40,1
+85,Thunderbolt,Electric,Special,15,90,1
