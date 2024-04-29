@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
+// Wouldn't have unused if full production but tests & logging not connected
+// Suppressing Warnings for above reasons
+@SuppressWarnings({"unused", "CallToPrintStackTrace", "resource"})
 public class Monster {
     // Monster Demographics variables
     // Information pulled from https://www.pokemon.com/pokedex
@@ -35,7 +37,7 @@ public class Monster {
     }
     /**
      * LoadMonster is called at start with the default path of data/singlePokemon.xml.
-     * File can be overriden and a different file loaded by calling this version of the method.
+     * File can be overwritten and a different file loaded by calling this version of the method.
      * @param newFile The string value of the path and filename for new monster file.
      */
     public void loadMonster(String newFile) {
@@ -92,7 +94,7 @@ public class Monster {
 
                         switch (counter) {
                             // Check counter from 0 to 5 - set a stat
-                            // If its not 0-5 then break out by setting flag
+                            // If it's not 0-5 then break out by setting flag
                             case 0:
                                 hp = Integer.parseInt(line);
                                 break;
@@ -136,16 +138,37 @@ public class Monster {
      */
     private void loadRegion() {
         // we are just going to assume that Bulbasaur is the first region
-        // Typically this would be a seperate table in a database
-        // variable to hold all regions
+        // Typically this would be a separate table in a database
+
+        // variable to hold all regions (outside of try scope)
+        List<Region> regions = new ArrayList<>();
         try {
-            // Technically I can make this an assignment and then Split ....but
-            String[] kanto = Files.readAllLines(regionPath).get(1).split(",");
-            region = new Region(Integer.parseInt(kanto[0]), kanto[1], kanto[2]);
+            // Read all the Regions into a List of Regions
+            for (String line : Files.readAllLines(regionPath)) {
+                if (!line.startsWith("id")) { // skip header line
+                    String[] fields = line.split(",");
+                    regions.add(new Region(Integer.parseInt(fields[0]), fields[1], fields[2]));
+                }
+            }
         } catch (IOException ex) {
             System.out.println("Region file is unreadable or not found!");
             ex.printStackTrace();
         }
+
+        /* Now we can look at all the regions and assign by id (each game had max/min ids)
+         * First game was 1-151, second 152 to 255
+         * then they moved from hex to 16-bit integer is now 65535 (Gen.6)
+         * Gen.7 changed to 32-bit and set max at 999999 <- we'd have to move to long
+         */
+        if (this.id <= 151) {
+            this.region = regions.get(0);
+        } else if (this.id <= 255) { // note - not switch so don't need id>=152
+            this.region = regions.get(1);
+        } else {
+            // I could keep going, but we don't have a non-gen 3 monster
+            this.region = regions.get(3);
+        }
+
     }
 
     /**
